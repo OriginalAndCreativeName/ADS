@@ -6,7 +6,7 @@ public class PatternMaker {
 		ArrayList<Character> prevChars = new ArrayList<Character>();
 		String out="";
 		for(int i=0; i<in.length(); i++) {
-			Character currentCharacter = Character.toLowerCase(in.charAt(i));
+			Character currentCharacter = in.charAt(i);
 			if(!prevChars.contains(currentCharacter)) {
 				prevChars.add(currentCharacter);
 				out+= LETTERS.charAt(prevChars.size()-1);
@@ -24,7 +24,11 @@ public class PatternMaker {
 		System.out.println(makePattern("baboon"));
 		System.out.println(makePattern("mississippi"));
 
-
+		System.out.println(makePattern("Cat"));
+		System.out.println(makePattern("Moon"));
+		System.out.println(makePattern("Where"));
+		System.out.println(makePattern("Baboon"));
+		System.out.println(makePattern("MIssissippi"));
 
 	}
 }
