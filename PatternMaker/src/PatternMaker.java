@@ -29,6 +29,12 @@ public class PatternMaker {
 		System.out.println(makePattern("Where"));
 		System.out.println(makePattern("Baboon"));
 		System.out.println(makePattern("MIssissippi"));
+		
+		System.out.println(makePattern("CATEcate"));
+		System.out.println(makePattern("Moon"));
+		System.out.println(makePattern("Where"));
+		System.out.println(makePattern("Baboon"));
+		System.out.println(makePattern("MIssissippi"));
 
 	}
 }

@@ -12,16 +12,15 @@ public class WordMaker {
 				word+=newChar;
 			}
 			else {
+				makingWord=true;
 				word=Character.toString(newChar);
 			}
 		}
 		else {
-			if(makingWord) {
+			if(makingWord&&newChar!='\'') {
 				makingWord=false;
-				word+=newChar;
 			}
 		}
-		
 	}
 	public boolean wordReady() {
 		return !makingWord;
@@ -33,5 +32,32 @@ public class WordMaker {
 		else {
 			return "that wasn't supposed to happen";
 		}
+	}
+	public static void main(String args[]) {
+		WordMaker test = new WordMaker();
+		test.addChar('A');
+        test.addChar('A');
+        test.addChar('A');
+        test.addChar(' ');
+        test.addChar('A');
+        test.addChar('S');
+        test.addChar('S');
+        test.addChar('.');
+        System.out.println(test.wordReady());
+        test.addChar(' ');
+        test.addChar(' ');
+        test.addChar(' ');
+        test.addChar(' ');
+        test.addChar('A');
+        test.addChar('S');
+        test.addChar('S');
+        test.addChar('\'');
+        System.out.println(test.wordReady());
+        test.addChar('\'');
+        System.out.println(test.wordReady());
+        System.out.println(test.getWord());
+
+        test.addChar('.');
+        System.out.println(test.getWord());
 	}
 }
