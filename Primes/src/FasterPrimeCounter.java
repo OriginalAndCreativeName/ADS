@@ -1,10 +1,10 @@
 
 public class FasterPrimeCounter {
 	public boolean isPrime(int N) {
-		if(N==1) {
+		if(N==1|N==0) {
 			return false;
 		}
-		for(int i=2; i<Math.floor(Math.sqrt(N)); i++) {
+		for(int i=2; i<=N/2; i++) {
 			if(N%i==0) {
 				return false;
 			}
@@ -21,9 +21,9 @@ public class FasterPrimeCounter {
 		return numPrimes;
 	}
 	public static void main(String[] args) {
-		FirstPrimeCounter test = new FirstPrimeCounter();
+		FasterPrimeCounter test = new FasterPrimeCounter();
 		long start = System.currentTimeMillis();
-		System.out.println(test.countPrimes(345764753));
+		System.out.println(test.countPrimes(1000));
 		long end = System.currentTimeMillis();
 		System.out.println(end-start);
 	}

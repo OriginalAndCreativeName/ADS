@@ -1,10 +1,10 @@
 
 public class SquareRootPrimeCounterClass {
 	public boolean isPrime(int N) {
-		if(N==1) {
+		if(N==1||N==0) {
 			return false;
 		}
-		for(int i=2; i<Math.floor(Math.sqrt(N)); i++) {
+		for(int i=2; i<=Math.floor(Math.sqrt(N))+1; i++) {
 			if(N%i==0) {
 				return false;
 			}
@@ -21,7 +21,7 @@ public class SquareRootPrimeCounterClass {
 		return numPrimes;
 	}
 	public static void main(String[] args) {
-		FirstPrimeCounter test = new FirstPrimeCounter();
+		SquareRootPrimeCounterClass test = new SquareRootPrimeCounterClass();
 		long start = System.currentTimeMillis();
 		System.out.println(test.countPrimes(1000));
 		long end = System.currentTimeMillis();
